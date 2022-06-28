@@ -10,6 +10,15 @@ jobs:
     timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
+      - name: Get PR Event
+        id: get_pr_event
+        uses: potiuk/get-workflow-origin@v1_1
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+          sourceRunId: ${{github.event.workflow_run.id}}
+      - name: Cancel if PR doesn't target `main` branch
+        if: ${{steps.get_pr_event.outputs.targetBranch != 'main'}}
+        uses: andymckay/cancel-action@0.2
       - uses: haya14busa/action-workflow_run-status@v1
       - name: Checkout
         uses: actions/checkout@v2
