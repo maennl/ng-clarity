@@ -656,6 +656,7 @@
     flex-direction: column;
     flex: 1 1 auto;
     align-content: flex-start;
+    position: relative;
 
     .datagrid-body {
       width: auto;
@@ -676,7 +677,8 @@
 
       clr-dg-filter,
       clr-dg-string-filter,
-      clr-dg-numeric-filter {
+      clr-dg-numeric-filter,
+      clr-dg-column-settings {
         display: flex;
         order: 99;
         margin-left: auto;
@@ -691,7 +693,8 @@
         width: $clr_baselineRem_78px;
       }
 
-      .datagrid-filter-toggle {
+      .datagrid-filter-toggle,
+      .datagrid-settings-toggle {
         @include clr-no-styles-button();
         cursor: pointer;
         float: right;
@@ -713,7 +716,8 @@
           }
         }
 
-        &.datagrid-filter-open {
+        &.datagrid-filter-open,
+        &.datagrid-settings-open {
           cds-icon,
           clr-icon {
             @include css-var(color, clr-color-action-600, $clr-color-action-600, $clr-use-custom-properties);
@@ -728,7 +732,8 @@
         }
       }
 
-      .datagrid-filter {
+      .datagrid-filter,
+      .datagrid-settings {
         top: 100%;
         right: 0;
         margin-top: $clr_baselineRem_0_2;
@@ -751,7 +756,8 @@
         @include css-var(border-radius, clr-global-borderradius, $clr-global-borderradius, $clr-use-custom-properties);
         font-weight: normal;
 
-        .datagrid-filter-close-wrapper {
+        .datagrid-filter-close-wrapper,
+        .datagrid-settings-close-wrapper {
           text-align: right;
 
           .close {
@@ -765,7 +771,8 @@
         }
       }
 
-      .datagrid-filter {
+      .datagrid-filter,
+      .datagrid-settings {
         top: 100%;
         right: 0;
         margin-top: $clr_baselineRem_0_2;
@@ -788,7 +795,8 @@
         @include css-var(border-radius, clr-global-borderradius, $clr-global-borderradius, $clr-use-custom-properties);
         font-weight: normal;
 
-        .datagrid-filter-close-wrapper {
+        .datagrid-filter-close-wrapper,
+        .datagrid-settings-close-wrapper {
           text-align: right;
 
           .close {
@@ -802,7 +810,8 @@
         }
       }
 
-      .datagrid-filter {
+      .datagrid-filter,
+      .datagrid-settings {
         top: 100%;
         right: 0;
         margin-top: $clr_baselineRem_0_2;
@@ -825,7 +834,8 @@
         @include css-var(border-radius, clr-global-borderradius, $clr-global-borderradius, $clr-use-custom-properties);
         font-weight: normal;
 
-        .datagrid-filter-close-wrapper {
+        .datagrid-filter-close-wrapper,
+        .datagrid-settings-close-wrapper {
           text-align: right;
 
           .close {
@@ -1739,6 +1749,7 @@
       justify-content: flex-end;
 
       .btn.btn-link {
+        @include css-var(color, clr-modal-close-color, $clr-modal-close-color, $clr-use-custom-properties);
         margin-top: $clr_baselineRem_0_667;
         margin-bottom: 0;
         padding-right: 0;
@@ -1915,7 +1926,8 @@
     }
   }
 
-  .datagrid-filter {
+  .datagrid-filter,
+  .datagrid-settings {
     margin-top: $clr_baselineRem_0_2;
     @include css-var(
       background,
@@ -1936,7 +1948,8 @@
     @include css-var(border-radius, clr-global-borderradius, $clr-global-borderradius, $clr-use-custom-properties);
     font-weight: normal;
 
-    .datagrid-filter-close-wrapper {
+    .datagrid-filter-close-wrapper,
+    .datagrid-settings-close-wrapper {
       text-align: right;
 
       .close {

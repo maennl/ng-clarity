@@ -18,6 +18,7 @@ import {
   timesIcon,
   viewColumnsIcon,
   windowCloseIcon,
+  wrenchIcon,
 } from '@cds/core/icon';
 
 import { ClrFormsModule } from '../../forms/forms.module';
@@ -43,6 +44,7 @@ import { ClrDatagridActionOverflow } from './datagrid-action-overflow';
 import { ClrDatagridCell } from './datagrid-cell';
 import { ClrDatagridColumn } from './datagrid-column';
 import { ClrDatagridColumnSeparator } from './datagrid-column-separator';
+import { ClrDatagridColumnSettings } from './datagrid-column-settings';
 import { ClrDatagridColumnToggle } from './datagrid-column-toggle';
 import { ClrDatagridColumnToggleButton } from './datagrid-column-toggle-button';
 import { ClrDatagridColumnToggleTitle } from './datagrid-column-toggle-title';
@@ -91,6 +93,7 @@ export const CLR_DATAGRID_DIRECTIVES: Type<any>[] = [
   ClrDatagridPlaceholder,
   ClrDatagridColumnToggleButton,
   ClrDatagridColumnToggleTitle,
+  ClrDatagridColumnSettings,
   ClrDatagridDetail,
   ClrIfDetail,
   ClrDatagridDetailHeader,
@@ -146,7 +149,8 @@ export class ClrDatagridModule {
       stepForward2Icon,
       angleDoubleIcon,
       filterGridCircleIcon,
-      filterGridIcon
+      filterGridIcon,
+      wrenchIcon
     );
   }
 }

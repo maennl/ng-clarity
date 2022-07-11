@@ -5,8 +5,7 @@
  */
 
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable()
 export class ButtonHubService {
@@ -44,15 +43,15 @@ export class ButtonHubService {
 
   public buttonClicked(buttonType: string): void {
     if ('previous' === buttonType) {
-      this._previousBtnClicked.next();
+      this._previousBtnClicked.next(undefined);
     } else if ('next' === buttonType) {
-      this._nextBtnClicked.next();
+      this._nextBtnClicked.next(undefined);
     } else if ('finish' === buttonType) {
-      this._finishBtnClicked.next();
+      this._finishBtnClicked.next(undefined);
     } else if ('danger' === buttonType) {
-      this._dangerBtnClicked.next();
+      this._dangerBtnClicked.next(undefined);
     } else if ('cancel' === buttonType) {
-      this._cancelBtnClicked.next();
+      this._cancelBtnClicked.next(undefined);
     } else {
       this._customBtnClicked.next(buttonType);
     }

@@ -452,7 +452,7 @@ export class ClrWizard implements OnDestroy, AfterContentInit, DoCheck {
    */
   public reset(): void {
     this.pageCollection.reset();
-    this.onReset.next();
+    this.onReset.next(undefined);
   }
 
   private listenForNextPageChanges(): Subscription {

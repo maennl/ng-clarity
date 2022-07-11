@@ -163,6 +163,11 @@ export interface ClrCommonStrings {
    */
   allColumnsSelected: string;
   /**
+   * Datagrid Column settings
+   */
+  datagridColumnSettingsAriaLabel: string;
+  datagridSettingsDialogAriaLabel: string;
+  /**
    * Signpost Toggle Button
    */
   signpostToggle: string;

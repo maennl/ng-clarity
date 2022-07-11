@@ -111,4 +111,6 @@ export const commonStringsDefault: ClrCommonStrings = {
    * Datagrid footer; sr-only text after the number of selected rows.
    */
   selectedRows: 'Selected rows',
+  datagridColumnSettingsAriaLabel: 'Column settings',
+  datagridSettingsDialogAriaLabel: 'edit column settings',
 };

@@ -27,6 +27,7 @@ export * from './datagrid-footer';
 export * from './datagrid-page-size';
 export * from './datagrid-pagination';
 export * from './datagrid-placeholder';
+export * from './datagrid-column-settings';
 
 export * from './interfaces/state.interface';
 export * from './enums/sort-order.enum';

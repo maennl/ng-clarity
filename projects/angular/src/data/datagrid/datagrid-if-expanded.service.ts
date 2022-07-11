@@ -30,7 +30,7 @@ export class DatagridIfExpandService extends IfExpandService {
     value = !!value;
     if (value !== this._expanded) {
       this._expanded = value;
-      this._animate.next();
+      this._animate.next(undefined);
       this._expandChange.next(value);
     }
   }
@@ -38,7 +38,7 @@ export class DatagridIfExpandService extends IfExpandService {
   override loadingStateChange(state: ClrLoadingState) {
     super.loadingStateChange(state);
     if (state !== ClrLoadingState.LOADING) {
-      this._animate.next();
+      this._animate.next(undefined);
     }
   }
 

@@ -138,12 +138,12 @@ export default function (): void {
         selectionProvider.selectionType = SelectionType.Multi;
         context.detectChanges();
         checkbox = context.clarityElement.querySelector("input[type='checkbox']");
-        expect(checkbox.getAttribute('aria-label')).toBeString('uniq aria-label');
+        expect(checkbox.getAttribute('aria-label')).toBe('uniq aria-label');
         // Test single select row
         selectionProvider.selectionType = SelectionType.Single;
         context.detectChanges();
-        radio = context.clarityElement.querySelector("input[type='radio']");
-        expect(radio.getAttribute('aria-label')).toBeString('uniq aria-label');
+        radio = context.clarityElement.querySelector("input[type=''input[type='radio']");
+        expect(radio.getAttribute('aria-label')).toBe('uniq aria-label');
       }));
 
       it('should toggle when clrDgSelectable is false for type  SelectionType.Multi', () => {

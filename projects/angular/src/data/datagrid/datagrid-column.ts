@@ -17,6 +17,7 @@ import {
   OnInit,
   Output,
   SimpleChanges,
+  TemplateRef,
   ViewContainerRef,
 } from '@angular/core';
 import { Subscription } from 'rxjs';
@@ -81,6 +82,10 @@ import { WrappedColumn } from './wrapped-column';
         <ng-container *ngTemplateOutlet="columnTitle"></ng-container>
       </span>
 
+      <clr-dg-column-settings *ngIf="columnSettings !== null && columnSettings !== undefined">
+        <ng-container *ngTemplateOutlet="columnSettings"></ng-container>
+      </clr-dg-column-settings>
+
       <clr-dg-column-separator *ngIf="showSeparator"></clr-dg-column-separator>
     </div>
   `,
@@ -107,6 +112,22 @@ export class ClrDatagridColumn<T = any>
     super(filters);
     this.subscriptions.push(this.listenForSortingChanges());
     this.subscriptions.push(this.listenForDetailPaneChanges());
+  }
+
+  private _columnSettings: TemplateRef<any> | null = null;
+
+  get columnSettings(): TemplateRef<any> | null {
+    return this._columnSettings;
+  }
+
+  @Input()
+  set columnSettings(value: TemplateRef<any> | null) {
+    if (this._columnSettings !== value) {
+      this._columnSettings = value;
+      // Have to manually change because of OnPush
+      this.changeDetectorRef.markForCheck();
+      console.log(value);
+    }
   }
 
   public showSeparator = true;
