@@ -1,6 +1,5 @@
 {
   "name": "@clr/angular",
-  "version": "13.4.2",
   "description": "Angular components for Clarity",
   "homepage": "https://clarity.design",
   "keywords": [
@@ -19,8 +18,8 @@
     "url": "https://github.com/vmware-clarity/ng-clarity/issues"
   },
   "peerDependencies": {
-    "@angular/common": "^13.0.0",
-    "@angular/core": "^13.0.0",
-    "@cds/core": "^5.6.0 || ^6.0.0"
+    "@angular/common": "^14.0.0",
+    "@angular/core": "^14.0.0",
+    "@cds/core": "^6.1.1"
   }
 }
