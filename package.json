@@ -133,5 +133,6 @@
     "awesome-typescript-loader": "^5.2.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "shelljs": "^0.8.5"
-  }
+  },
+  "version": "13.4.2"
 }
