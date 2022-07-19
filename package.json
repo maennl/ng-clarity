@@ -8,7 +8,7 @@
     "npm": ">=7.10.0"
   },
   "scripts": {
-    "version:from-git": "npm version from-git --allow-same-version --force",
+    "version:from-git": "npm version from-git --allow-same-version --force;git add .; git commit -m \"chore(pre-release): v$npm_package_version\" || true",
     "version:update-dist": "/bin/sh scripts/update-versions.sh",
     "build": "npm-run-all _build:angular _build:ui _build:storybook _build:demo",
     "build:ci": "npm-run-all clean lint build test public-api:check",
